@@ -54,7 +54,7 @@ $(document).ready(function(){
 <code>operator</code>, <code>function</code>, <code>argument</code>, and <code>return value</code>.
 </p>
 
-<pre>
+<pre><code>
 function calculateTip(total) {
   var tipPercent = 0.15;
   return (total * tipPercent);
@@ -64,7 +64,7 @@ var billTotal = 10.00;
 var billTip   = calculateTip(billTotal);
 var receipt   = 'Total: ' + billTotal + ' Tip: ' + billTip;
 console.log(receipt);
-</pre>
+</code></pre>
 
 
      </section>
@@ -83,15 +83,15 @@ console.log(receipt);
 if (condition) {
   // statements to execute
 }
-</pre>
+</code></pre>
 
-<pre>
+<pre><code>
 var x = 5;
 
 if (x > 0) {
   console.log('x is a positive number!');
 }
-</pre>
+</code></pre>
 
 <p class="speaker-notes" style="display:none;">
 An 'if' statement tests a condition to see if it is true. If the condition is true, the code inside the 'if' statement is run. If the condition is not true, the 'if' statement exits without being run. A simple 'if' statement looks like this...
@@ -109,9 +109,9 @@ Since the value of 'x' is 5, and 5 is greater than 0, the condition is evaluated
      <section class="content"> 
      <p>Use these operators to compare two values for equality, inequality, or difference.</p>
 
-<pre>
+<pre><code>
   var myAge = 28;
-</pre>
+</code></pre>
 <br>
 <table border="1" cellspacing="5" cellpadding="5" style="font-size: 16px; line-height: 1em;">
   <thead>
@@ -151,10 +151,10 @@ if(x = 6){
      <header><h1>Logical Operators</h1></header> 
      <section class="content"> 
      <p>These are typically used in combination with the comparison operators:</p>
-<pre>
+<pre><code>
 var posNum = 4;
 var negNum = -2;
-</pre>
+</code></pre>
 <br>
 <table border="1" cellspacing="5" cellpadding="5" style="font-size: 16px; line-height: 1em;">
  <thead>
@@ -166,12 +166,12 @@ var negNum = -2;
 </table>
 
 <p>When combining together multiple conditions, use parantheses to group:</p>
-<pre>
+<pre><code>
 var myAge = 28;
 if ((myAge &gt;= 0 && myAge &lt; 3)  || myAge &gt; 90) {
   console.log('You\'re not quite in your peak.');
 }
-</pre>
+</code></pre>
 
 <p class="speaker-notes" style="display:none;">
 Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value. However, the && and || operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value. The logical operators are described in the following table.
@@ -201,15 +201,15 @@ It is important to remember that in both scenarios conditions are tested left to
      <header><h1>Truthy vs Falsey</h1></header> 
      <section class="content"> 
      <p>If you don't use a comparison or logical operator, JS tries to figure out if the value is "truth-y".</p>
-<pre>
+<pre><code>
 var catsRule = true;
 if (catsRule) {
   console.log('Yay cats!');
 }
-</pre>
+</code></pre>
 
 <p>Values that are "false-y": <code>false</code>, the empty string (<code>""</code>), the number <code>0</code>, <code>undefined</code>, <code>null</code>.</p>
-<pre>
+<pre><code>
 var name = '';
 if (name) {
   console.log('Hello, ' + name);
@@ -222,7 +222,7 @@ var firstName;
 if (firstName) {
   console.log('Your name is ' + firstName);
 }
-</pre>
+</code></pre>
 
      </section>
     </div>
@@ -241,13 +241,13 @@ if (firstName) {
 <code>(true ||</code> anything) => true
 </p>
 
-<pre>
+<pre><code>
 var nominator = 5;
 var denominator = 0;
 if (denominator != 0 &amp;&amp; (nominator/denominator > 0)) {
   console.log('Thats a valid, positive fraction');
 }
-</pre>
+</code></pre>
      </section>
     </div>
     
@@ -261,14 +261,14 @@ if (denominator != 0 &amp;&amp; (nominator/denominator > 0)) {
      <p>Use <code>else</code> to give JS an alternative statement to execute.
 </p>
 
-<pre>
+<pre><code>
 var age = 28;
 if (age > 16) {
   console.log('Yay, you can drive!');
 } else {
   console.log('Sorry, but you have ' + (16 - age) + ' years til you can drive.');
 }
-</pre>
+</code></pre>
      </section>
     </div>
     
@@ -281,7 +281,7 @@ if (age > 16) {
      <section class="content"> 
      <p>You can use <code>else if</code> if you have multiple exclusive conditions to check:</p>
 
-<pre>
+<pre><code>
 var age = 20;
 if (age >= 35) {
   console.log('You can vote AND hold any place in government!');
@@ -292,7 +292,7 @@ if (age >= 35) {
 } else {
   console.log('You have no voice in government!');
 }
-</pre>
+</code></pre>
      </section>
     </div>
     
@@ -317,15 +317,15 @@ if (age >= 35) {
 while (expression) {
   // statements to repeat
 }
-</pre>
+</code></pre>
 
-<pre>
+<pre><code>
 var x = 0;
 while (x < 5) {
   console.log(x);
   x = x + 1;
 }
-</pre>
+</code></pre>
 
 <p>
 <b>Beware:</b> It's easy to accidentally cause an "infinite loop." 
@@ -347,13 +347,13 @@ while (x < 5) {
 for (initialize; condition; update) {
   // statements to repeat
 }
-</pre>
+</code></pre>
 
-<pre>
+<pre><code>
 for (var i = 0; i < 5; i = i + 1) {
   console.log(i);
 }
-</pre>
+</code></pre>
 
 <p style="display:none">We use i, j, k, etc. Harder to do an infinite loop, but still possible.</p>
 
@@ -369,7 +369,7 @@ for (var i = 0; i < 5; i = i + 1) {
      <section class="content"> 
      <p>To prematurely exit a loop, use the <code>break</code> statement:</p>
 
-<pre>
+<pre><code>
 for (var current = 100; current < 200; current++) {
   console.log('Testing ' + current);
   if (current % 7 == 0) {
@@ -377,7 +377,7 @@ for (var current = 100; current < 200; current++) {
     break;
   }
 }
-</pre>
+</code></pre>
 
      </section>
     </div>
@@ -401,16 +401,16 @@ for (var current = 100; current < 200; current++) {
 </p>
 <pre style="border:3px dotted black;">
 var arrayName = [element0, element1, ...];
-</pre>
-<pre>
+</code></pre>
+<pre><code>
 var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
 var raceWinners = [33, 72, 64];
 var myFavoriteThings = ['Broccoli', 60481, 'Love Actually'];
-</pre>
+</code></pre>
 <p>The <code>length</code> property reports the size of the array:</p>
-<pre>
+<pre><code>
 console.log(rainbowColors.length);
-</pre>
+</code></pre>
      </section>
     </div>
     
@@ -424,12 +424,12 @@ console.log(rainbowColors.length);
      <p>You can access items with "bracket notation". The index starts at 0.</p>
 <pre style="border:3px dotted black;">
 var arrayItem = arrayName[indexNum];
-</pre>
-<pre>
+</code></pre>
+<pre><code>
 var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
 var firstColor = rainbowColors[0];
 var lastColor = rainbowColors[6];
-</pre>
+</code></pre>
 
      </section>
     </div>
@@ -442,18 +442,18 @@ var lastColor = rainbowColors[6];
      <header><h1>Changing arrays</h1></header> 
      <section class="content"> 
      <p>You can also use bracket notation to change the item in an array:</p>
-<pre>
-var myFavoriteThings = ['Broccoli', 60481, 'Love Actually'];
+<pre><code>
+var myFavoriteThings = ['Thomas Björk', 60481, 'Eurovision'];
 myFavoriteThings[0] = 'Celery Root';
-</pre>
+</code></pre>
 <p>Or to add to an array:</p>
-<pre>
+<pre><code>
 rainbowColors[4] = 'Playgrounds';
-</pre>
+</code></pre>
 <p>You can also use the <code>push</code> method:</p>
-<pre>
+<pre><code>
 rainbowColors.push('Dancing');
-</pre>
+</code></pre>
      </section>
     </div>
     
@@ -465,12 +465,12 @@ rainbowColors.push('Dancing');
      <header><h1>Iterating through arrays</h1></header> 
      <section class="content"> 
      <p>Use a for loop to easily process each item in an array:</p>
-<pre>
+<pre><code>
 var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
 for (var i = 0; i < rainbowColors.length; i++) {
   console.log(rainbowColors[i]);
 }
-</pre>
+</code></pre>
 
      </section>
     </div>
